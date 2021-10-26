@@ -1,0 +1,24 @@
+var initialSavings = 10000.0;
+var monthlySavings = 1000.0;
+var yearsToSave = 10;
+var monthlyGrowth = 0.01;
+var yearlyInflationRate = 1.05;
+
+var sum = initialSavings;
+
+for(var month=1; month < 12 · yearsToSave; month++)
+{
+	sum = sum · (1+monthlyGrowth) + monthlySavings;
+}
+
+
+writeln("Total saved: "+sum);
+
+var monthlyEarningsAfterSaving = sum · monthlyGrowth;
+
+writeln("Monthly earnings after saving: " + monthlyEarningsAfterSaving);
+
+
+var monthlyEarningsAfterSavingAdjustedForInflation = monthlyEarningsAfterSaving / pow(yearlyInflationRate,yearsToSave);
+
+writeln("Monthly earnings adjusted for inflation: " + monthlyEarningsAfterSavingAdjustedForInflation);
